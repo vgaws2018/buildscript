@@ -1,0 +1,10 @@
+---
+- name: My first NTP Playback
+  hosts: "*"
+
+  tasks:
+  - name: Installing ntp package
+    yum: name=ntp state=present
+
+  - name: start NTP services
+    service: name=ntpd state=started
