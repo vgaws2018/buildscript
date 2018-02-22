@@ -4,7 +4,7 @@
 
   tasks:
   - name: Installing ntp package
-    yum: name=ntp state=present
+    yum: name=ntp state=absent
 
   - name: start NTP services
     service: name=ntpd state=started
